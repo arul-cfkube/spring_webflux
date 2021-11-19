@@ -13,7 +13,6 @@ import java.util.List;
 @RestController
 @RequestMapping("math")
 public class MathController {
-
     @Autowired
     private MathService mathService;
 
