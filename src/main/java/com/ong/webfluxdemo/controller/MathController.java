@@ -25,4 +25,9 @@ public class MathController {
     public List<Response> multiplicationTable(@PathVariable int input) {
         return this.mathService.multiplicationTable(input);
     }
+
+    @GetMapping("table/delayed/{input}")
+    public List<Response> delayedmultiplicationTable(@PathVariable int input) {
+        return this.mathService.delayedmultiplicationTable(input);
+    }
 }

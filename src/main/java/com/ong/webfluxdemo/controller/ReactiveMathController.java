@@ -17,6 +17,11 @@ public class ReactiveMathController {
     @Autowired
     private ReactiveMathService mathService;
 
+    @GetMapping("/home")
+    String home() {
+        return "Hello from Math-World!";
+    }
+
     @GetMapping("square/{input}")
     public Mono<Response> findSquare(@PathVariable int input) {
         return this.mathService.findSquare(input);
@@ -30,6 +35,11 @@ public class ReactiveMathController {
     @GetMapping(value = "table/{input}/stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<Response> multiplicationTableStream(@PathVariable int input) {
         return this.mathService.multiplicationTable(input);
+    }
+
+    @GetMapping(value = "table/{input}/delayed-stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public Flux<Response> delayedmultiplicationTable(@PathVariable int input) {
+        return this.mathService.delayedmultiplicationTable(input);
     }
 
     @PostMapping("multiply")

@@ -20,7 +20,15 @@ public class ReactiveMathService {
     }
 
     public Flux<Response> multiplicationTable(int input) {
-        return Flux.range(1, 10)
+        return Flux.range(1, 100)
+        //       .delayElements(Duration.ofSeconds(1))
+//                .doOnNext(i -> SleepUtil.sleepSeconds(1))
+                .doOnNext(i -> System.out.println("reactive-math-service processing : " + i))
+                .map(i -> new Response(i * input));
+    }
+
+    public Flux<Response> delayedmultiplicationTable(int input) {
+        return Flux.range(1, 100)
                 .delayElements(Duration.ofSeconds(1))
 //                .doOnNext(i -> SleepUtil.sleepSeconds(1))
                 .doOnNext(i -> System.out.println("reactive-math-service processing : " + i))
