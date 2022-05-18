@@ -9,7 +9,7 @@ metadata:
     'backstage.io/kubernetes-label-selector': 'app=backstage'
     'backstage.io/techdocs-ref': dir:.
 spec:
-  type: other
-  lifecycle: unknown
+  type: service
+  lifecycle: development
   owner: default-team
   system: backstage
