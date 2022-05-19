@@ -8,6 +8,8 @@ metadata:
     github.com/project-slug: arulvannala/spring_webflux
     'backstage.io/kubernetes-label-selector': 'app=backstage'
     'backstage.io/techdocs-ref': dir:.
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=math-demo-live'
+    'app.kubernetes.io/part-of': 'math-demo-live'
 spec:
   type: service
   lifecycle: development
