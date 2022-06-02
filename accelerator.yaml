@@ -1,7 +1,7 @@
 accelerator:
   displayName: Spring-MathService
   description: Math Function Service
-  iconUrl: https://github.com/arulvannala/spring_webflux/math-day-logo.jpeg
+  iconUrl: https://github.com/arulvannala/spring_webflux/blob/main/math-day-logo.jpeg
   tags:
   - simple
   - getting-started
