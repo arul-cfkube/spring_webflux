@@ -1,7 +1,7 @@
 accelerator:
   displayName: Spring-MathService
-  description:
-  iconUrl: https://iconduck.com/icons/27855/rabbitmq
+  description: Math Function Service
+  iconUrl: https://github.com/arulvannala/spring_webflux/math-day-logo.jpeg
   tags:
   - simple
   - getting-started
