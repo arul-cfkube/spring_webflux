@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 
 public class hello {
-    @RequestMapping("/")
+    @RequestMapping("/hello")
 	public String index() {
-		return "Greetings from Math Service";
+		return "Greetings from Math Service /n /reactive-math/table/number/stream";
+
 	}
 }
