@@ -12,10 +12,17 @@ import reactor.core.publisher.Mono;
 import java.util.Map;
 
 @RestController
+
+
 @RequestMapping("reactive-math")
 public class ReactiveMathController {
     @Autowired
     private ReactiveMathService mathService;
+
+    @GetMapping("/")
+    public String index() {
+      return "Greetings from Math Service";
+    }
 
     @GetMapping("/home")
     String home() {
